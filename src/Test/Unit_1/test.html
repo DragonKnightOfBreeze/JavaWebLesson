@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个网页</title>
+    <style type="text/css">
+        *{
+            font-family: "微软雅黑",serif;
+            font-size:24px;
+            color:#555;
+        }
+        table{
+            border-spacing:0;       /*单元格边框间距*/
+        }
+        table tr,td{
+            border: 1px solid blue;
+            padding: 0.5em;
+            width: 50%;
+            margin:0;
+        }
+        table th{
+            font-weight: bold;
+            alignment: center;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        你好，世界！
+    </p>
+        开始HTML之旅！<br/>
+        制作第一个网页。
+    <div style="border:1px solid green;height: 150px; margin: 10px;" id = "id1">
+        微软雅黑天下第一。
+    </div>
+    <s>删除线</s>
+    <u>下划线</u>
+    <b>加粗</b>
+    <em>强调</em>
+    <i>斜体</i>
+
+    <a href="http://baidu.com">百度</a><br/>
+    <a href="#">回到顶端</a>    <!--锚点-->
+
+    <!--定义锚点-->
+    <a name = "anchorname1">锚点</a><br/>     <!--对于其他超链接-->
+
+    <h2 id = "1">锚点2</h2><br/>              <!--对于一般元素-->
+    <a href = "#id1">回到DIV</a>
+    <!--对于不同界面之间的跳转，需要在#id之前加上 页面地址，用空格隔离-->
+
+    <!--热点链接-->
+    <p>
+    <img src="Fox_8.png" usemap = "#mymap"/>
+    <map name = "mymap">
+        <area href="baidu.com" shape = "circle" coords="100,100,10"/><!--X坐标，Y坐标，半径-->
+        <area href="pixiv.com" shape = "rect" coords="100,100,10,20"/><!--X坐标，Y坐标，长，宽-->
+    </map>
+    </p>
+
+    <!--表格-->
+    <table>
+        <th>
+            <td>姓名</td><td>联系方式</td>
+        </th>
+        <tr>
+            <td>太阳骑士王老菊</td><td>太阳骑士专线</td>
+        </tr>
+        <tr>
+            <td>月亮骑士谷歌</td><td>暗月之剑专线</td>
+        </tr>
+    </table>
+
+    <!--跨列：colspan，跨行：rowspan-->
+    <!--thead,tbody,tfoot：比tr高一级-->
+
+</body>
+</html>
