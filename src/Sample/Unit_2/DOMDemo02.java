@@ -1,4 +1,4 @@
-package Sample.Unit_2;
+package sample.Unit_2;
 
 import java.io.*;
 import javax.xml.parsers.*;

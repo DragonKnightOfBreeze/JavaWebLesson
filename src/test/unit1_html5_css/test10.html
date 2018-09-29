@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试自动居中</title>
+    <style>
+        #div1,#div2,#div3{
+            position:absolute;
+            margin:auto;
+            left:0;
+            right:0;
+            top:0;
+            bottom: 0;
+
+            text-align: center;
+        }
+
+        #div1{
+            width: 20em;
+            height: 20em;
+            background-color: grey;
+            color: white;
+        }
+        #div2{
+            width: 15em;
+            height: 15em;
+            background-color: green;
+            color: white;
+        }
+        #div3{
+            width: 10em;
+            height: 10em;
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "div1">
+        我是最底层
+        <div id = "div2">
+            我是中间层
+            <div id = "div3">
+                我是最底层
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -130,12 +130,12 @@ public class DOMDemo01 {
 </AddressList>
 ```
 
-Java文件：Sample.Unit_2.DOMDemo02.java
+Java文件：sample.Unit_2.DOMDemo02.java
 
 ```java
 //生成的文件没有格式排列（适当的缩进）
 
-package Test.Unit_1;
+package Test.unit_1_html5;
 
 import java.io.*;
 import javax.xml.parsers.*;

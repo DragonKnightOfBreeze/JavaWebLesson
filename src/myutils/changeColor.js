@@ -9,3 +9,5 @@ function change(){
     setTimeout("change()",500)      //每隔500毫秒调用一次
 }
 
+
+
