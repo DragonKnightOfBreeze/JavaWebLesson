@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function del(){
+            var msg = document.getElementById("msg");
+            msg.innerHTML = "删除信息";
+            //延时调用，在3s后
+            window.setTimeout("restore()",3000);
+        }
+        function restore(){
+            var msg=document.getElementById("msg");
+            msg.innerHTML="";
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="删除" id="msg" onclick="del()">
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!--格式不正确，提示文字变红且加红色边框；格式正确，则恢复正常-->
+<!--格式不正确，不能提交（通过调用函数返回值来设置是否可以提交，return submit()）-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录验证</title>
+</head>
+<style>
+    form{
+        width:40%;
+        padding:2em;
+        margin:5em;
+        border:1px solid #666;
+    }
+    h1{
+        font-size: 1.6em;
+        font-weight: bold;
+        text-align: center;
+    }
+    .tip{
+        color:#999;
+        font-style: italic;
+    }
+    .warn{
+        color:red;
+        border:1px solid red;
+    }
+</style>
+<script>
+    function check(textId,tipId,regex){
+        var v = document.getElementById(textId).value;
+        var tip = document.getElementById(tipId);
+        var result = regex.test(v);
+        if (!result){
+            //tip.style.color = "red";
+            //tip.style.border = "1px solid red";
+            //另一种方法：通过改变类名来设置CSS格式
+            tip.className = "warn";
+        }else{
+            //tip.style.color = "black";
+            //tip.style.border = "none";
+            tip.className = "tip";
+        }
+    }
+
+    function submit(){
+        var result = check('account','tip1',/^\w{6,20}$/)  && check('password','tip2',/^\w{6,20}$/);
+        if(!result){
+            alert("输入的帐号或密码错误！");
+            return false;
+        }else{
+            return true;
+        }
+    }
+</script>
+<body>
+    <form action="" method="post" onsubmit="return submit();">
+        <h1>登录</h1>
+        <p>
+        <label for="account">帐号：</label>
+        <input type="text" id="account" onblur="check('account','tip1',/^\w{6,20}$/)">
+        <span id="tip1" class="tip">6-20个字母、数字、下划线</span>
+        </p>
+        <p>
+        <label for="password">密码：</label>
+        <input type="text" id="password" onblur="check('password','tip2',/^\w{6,20}$/)">
+        <span id="tip2" class="tip">6-20个字母、数字、下划线</span>
+        </p>
+        <p>
+        <input type="submit" value="提交">
+        </p>
+    </form>
+</body>
+</html>

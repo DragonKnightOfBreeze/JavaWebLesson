@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>产生随机数</title>
@@ -16,24 +16,18 @@
                 return;
             }
             var span = document.getElementById("output");
-            if(input_value>num){
+            if(input_value>num)
                 span.innerHTML="大了！";
-            }
-            else if(input_value<num){
+            else if(input_value<num)
                 span.innerHTML = "小了！";
-            }
-            else{
+            else
                 span.innerHTML="正确！";
-            }
         }
-
-
     </script>
 </head>
 <body>
-<input id = "input" type="text">
-<input type="button" value = "平方" onclick = "guess()"><br>
-<span id="output"></span>
-
+    <input id = "input" type="text">
+    <input type="button" value = "猜" onclick = "guess()"><br>
+    <span id="output"></span>
 </body>
 </html>
