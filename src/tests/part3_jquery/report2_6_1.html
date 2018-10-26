@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实现轮播图</title>
+
+    <style type="text/css">
+        ul{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            width:300px;
+            height:300px;
+            border:2px solid  #ccc;
+        }
+        li{
+            width:300px;
+            height:300px;
+            display:none;
+        }
+        .show{
+            display:block;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        var index = 0;
+
+        $(function(){
+            window.setInterval(function(){
+                $("#images li").eq(index).hide();
+                index = (index+1)%5;
+                $("#images li").eq(index) .show();
+            },1000);
+        });
+
+    </script>
+
+</head>
+
+<body>
+<ul id="images">
+    <li class="show"><img src="report2_6_1_assets/环印骑士直剑.jpg"/></li>
+    <li class="hide"><img src="report2_6_1_assets/环印骑士枪.jpg"/></li>
+    <li class="hide"><img src="report2_6_1_assets/环印骑士成对大剑.jpg"/></li>
+    <li class="hide"><img src="report2_6_1_assets/亚斯特拉直剑.jpg"/></li>
+    <li class="hide"><img src="report2_6_1_assets/亚斯特拉大剑.jpg"/></li>
+</ul>
+</body>
+</html>

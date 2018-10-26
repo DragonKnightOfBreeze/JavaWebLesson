@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简单计算器</title>
+
+    <style type="text/css">
+    .panel{
+        margin:0 auto;
+        width:275px;
+        height:310px;
+        border: 2px solid #bbb;
+    }
+    #screen{
+        width:200px;
+        height:40px;
+        border:1px solid #bbb;
+        margin:7px 0px 0px 7px;
+        float:left;
+    }
+    input{
+        font-size:20px;
+        width:50px;
+        height:50px;
+        margin:6px;
+    }
+    </style>
+
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(function(){
+            $(".panel").click(function(e){
+                cal(e);
+            });
+
+            function cal(e){
+                if(e.target.nodeName!=="INPUT" )
+                    return;
+
+                var screen = $("#screen");
+                var et = $(e.target);
+
+                if(et.val()==="C"){
+                    screen.empty();
+                }else if(et.val()==="="){
+                    try{
+                        var exp = screen.text();
+                        screen.text(window.eval("("+exp+")"));
+                    }catch(e){
+                        screen.text("error");
+                    }
+                }else{
+                    //原有字符串+新增字符串
+                    screen.text(screen.text() + et.val());
+                }
+            }
+        });
+
+    </script>
+</head>
+    <body>
+    <div class="panel">
+        <div>
+        <p id ="screen"></p>
+        <input type="button"  value="C"/>
+        </div>
+        <div>
+        <input type="button"  value="7"/>
+        <input type="button"  value="8"/>
+        <input type="button"  value="9"/>
+        <input type="button"  value="/"/>
+        <input type="button"  value="4"/>
+        <input type="button"  value="5"/>
+        <input type="button"  value="6"/>
+        <input type="button"  value="*"/>
+        <input type="button"  value="1"/>
+        <input type="button"  value="2"/>
+        <input type="button"  value="3"/>
+        <input type="button"  value="-"/>
+        <input type="button"  value="0"/>
+        <input type="button"  value="."/>
+        <input type="button"  value="="/>
+        <input type="button"  value="+"/>
+        </div>
+    </div>
+    </body>
+</html>
