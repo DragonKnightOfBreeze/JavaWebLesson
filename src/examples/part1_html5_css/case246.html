@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>图片变形</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <style type="text/css">
+      div{width:240px;height:320px;float:left;}
+      .bg0{background:url("images/img.jpg");}
+      .bg1{background-image:url("images/img.jpg");background-size:200px 200px;}
+      .bg2{background-image:url("images/img.jpg");background-size:80% 70%;}
+      .bg3{background-image:url("images/img.jpg");background-size:cover;}
+      .bg4{background-image:url("images/img.jpg");background-size:contain;}
+    </style>
+  </head>
+  
+  <body>
+    <!-- 素材中的图片为500*500大小 -->
+    <!-- 修改class值，观察图片变形情况 -->
+    <!-- 修改background-size的px值与div相同,结果如何？ -->
+    <!-- 修改background-size的%值为100%相同,结果如何？ -->
+    <div class="bg4"></div>
+  </body>
+</html>

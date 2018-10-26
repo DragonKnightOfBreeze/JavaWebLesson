@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制目标元素</title>
+    <script>
+        var temp;
+        var deleteBtn;
+        var addBtn;
+        var textarea;
+
+        function load(){
+            deleteBtn = document.getElementById("delete");
+            addBtn=document.getElementById("add");
+            textarea=document.getElementById("textarea");
+        }
+
+        function doAdd(){
+            deleteBtn.disabled = false;
+            addBtn.disabled = true;
+
+            document.body.appendChild(temp);
+            temp = null;
+            // textarea.innerHTML = temp;
+            // temp = "";
+        }
+        function doDelete(){
+            addBtn.disabled = false;
+            deleteBtn.disabled = true;
+
+            temp = textarea;
+            textarea.remove();
+            // textarea.parentNode.removeChild(textarea);
+            // temp = textarea.innerHTML;
+            // textarea.innerHTML = "";
+        }
+    </script>
+</head>
+
+<body onload="load()">
+    <input type="button" id="add" value="增加" disabled="disabled" onclick="doAdd()">
+    <input type="button" id="delete" value="删除" onclick="doDelete()"><br>
+    <textarea id="textarea" cols="50" rows="3">被控制的目标元素</textarea>
+</body>
+</html>

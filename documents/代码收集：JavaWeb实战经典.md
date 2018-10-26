@@ -130,7 +130,7 @@ public class DOMDemo01 {
 </AddressList>
 ```
 
-Java文件：sample.Unit_2.DOMDemo02.java
+Java文件：examples_ebook.Unit_2.DOMDemo02.java
 
 ```java
 //生成的文件没有格式排列（适当的缩进）

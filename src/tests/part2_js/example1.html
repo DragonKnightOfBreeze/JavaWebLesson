@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联动下拉列表</title>
+    <script>
+        var cityArray = [
+            ["南昌","九江","赣州"],
+            ["武汉","黄冈","黄石"],
+            ["长沙","常德","株洲"]
+        ];
+
+        function link(){
+            var province=document.getElementById("province");
+            var city=document.getElementById("city");
+            //删除所有子元素节点（option）
+            while(city.options.length >1){
+                city.removeChild(city.lastChild);
+            }
+            //添加对应的的子元素节点（option）
+            var index = province.selectedIndex -1;
+            for (var i = 0; i < cityArray[index].length; i++) {
+                var option = document.createElement("option");
+                option.innerText = cityArray[index][i];
+                city.appendChild(option);
+            }
+        }
+    </script>
+</head>
+<body>
+    <label for="province">省：</label>
+    <select id="province" onchange="link()">
+        <option>请选择省</option>
+        <option>江西省</option>
+        <option>湖北省</option>
+        <option>湖南省</option>
+    </select>
+
+    <label for="city">市：</label>
+    <select id="city">
+        <option>请选择市</option>
+
+    </select>
+</body>
+</html>

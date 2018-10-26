@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>不允许使用F5刷新</title>
+    <script type="text/javascript">
+
+        /*火狐浏览器*/
+
+        function click(e){
+            if(e.keyCode===116){//116为F5键的code
+                e.keyCode=0;//0为Null的code
+                alert("不允许使用F5刷新网页！");
+            }
+            return false;
+        }
+        document.onclick =  function (e){
+            alert("x坐标："+e.clientX);
+            alert("y坐标："+e.clientY);
+        }
+
+        /*Chrome*/
+
+        // document.onkeydown = function(){
+        //     if(event.keyCode==116){//116为F5键的code
+        //         event.keyCode=0;//0为Null的code
+        //         alert("不允许使用F5刷新网页！");
+        //         return false;
+        //     }
+        // };
+    </script>
+</head>
+
+<body onkeydown="click(event);">
+    <label>本页面不允许使用F5刷新</label>
+</body>
+</html>

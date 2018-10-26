@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").click(function () {
+                alert("这里没有猫咪！\n狐狸叫：呜呜呜！");
+            });
+
+            $("#foxWuWu").click(function () {
+                alert("呜呜呜！");
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>点击学猫叫！</p>
+    <input id="foxWuWu" type="button" value="点击学狐狸叫！" >
+</body>
+</html>

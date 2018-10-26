@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ex06.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <style type="text/css">
+      .error{
+        color:red;
+        border:1px solid red;  
+      }    
+    </style>
+    <script type="text/javascript">
+       var regExp = /^\w{6,20}$/;
+       function check_value(){
+         var account_value = document.getElementById("account").value;         
+         var span = document.getElementById("msg1");
+         if(!regExp.test(account_value)){
+             span.className = "error";
+         }else{
+             span.className = "";
+         }                
+       }
+       function test(){
+        var account_value = document.getElementById("account").value;
+        if(!regExp.test(account_value)){
+              alert("输入有误，无法提交");
+              return false;       
+        }else{
+             return true;
+        }
+       }    
+    </script>
+  </head>
+  
+  <body>
+    <form action="http://www.baidu.com" method="get" onsubmit = "return test();">
+      <h1>登录</h1>
+      <p>
+        <label for="account">账号:</label>
+        <input type="text" id="account" onblur="check_value();"/>
+        <span id="msg1">6-20个字母数字下划线</span>
+      </p>
+      <p>
+        <label for="psw">账号:</label>
+        <input type="password" id="psw"/>
+        <span id="msg2">6-20个字母数字下划线</span>
+      </p>
+      <p>
+        <input type="submit" value="提交"/>
+      </p>   
+    </form>
+  </body>
+</html>

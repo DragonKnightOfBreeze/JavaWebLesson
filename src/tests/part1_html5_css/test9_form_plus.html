@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<!--注册页面：手机号，验证码+验证码图片，用户名，密码，确认密码，注册按钮（提交）-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            font-family: "微软雅黑", sans-serif;
+            font-size:16px;
+        }
+        table{
+            margin: 1em 2em;
+            padding: 1em 2em;
+
+            border: 2px solid lightblue;
+        }
+        table thead th{
+            font-weight: bold;
+            font-size:1.5em;
+            text-align: center;
+
+            padding-bottom: 1em;
+            height: 1.5em;
+        }
+        table tr{
+            height: 1.5em;
+        }
+        .comment{
+            font-family: "宋体",serif;
+            color: green;
+            font-style: italic;
+        }
+
+        li{
+            list-style-type:none;
+            display:table-cell;     /*单元格的形式*/
+            width:8em;
+            height:2em;
+            background: #ddd;
+            text-align: center;         /*水平间距*/
+            vertical-align: center;     /*垂直对其*/
+        }
+        ul{
+            border-spacing: 1em;
+        }
+
+    </style>
+    <script language = "javascript" src = "test5_form.js">
+    </script>
+    <title>注册页面</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>首页</li>
+            <li>菜单</li>
+            <li>教程</li>
+            <li>手册</li>
+        </ul>
+    </div>
+
+
+    <form action="" method = "post" name = "regForm">
+        <table>
+            <thead>
+            <tr><th colspan="3">用户注册页面</th></tr>
+            </thead>
+
+            <tr>
+                <td><label for="userName">用户名：</label></td>
+                <td><input type = "text" name = "userName" id="userName" onclick="" title="" maxlength="16"/>
+                <td><div class="comment">用户名最长为8个汉字或16个字母和数字。</div></td>
+            </tr>
+            <tr>
+                <td><label>性别：</label> </td>
+                <td>
+                    <input type="radio" name="sex" value="male" title="" checked/>男生
+                    <input type="radio" name="sex" value="female" title=""/>女生
+                    </td>
+            </tr>
+            <tr>
+                <td><label for="phoneNum">手机号码：</label></td>
+                <td><input type="text" name="phoneNum" id="phoneNum" onclick="" title=""/></td>
+                <td><div class="comment">手机号码为11位数字。</div></td>
+            </tr>
+            <tr>
+                <td><label for="password">密码：</label></td>
+                <td><input type="password" name="password" id="password" onclick="" title="" maxlength="16"/></td>
+                <td><div class="comment">密码最长为16位字母、数字和特殊符号。</div></td>
+            </tr>
+            <tr>
+                <td><label for="rePassword">确认密码：</label></td>
+                <td><input type="password" name="rePassword" id="rePassword" onclick="" title="" maxlength="16"/></td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td><label>出身：</label></td>
+                <td>
+                    <select title="">
+                        <option>（异乡人）</option>
+                        <option value="0">罗德兰</option>
+                        <option value="1">亚斯特拉</option>
+                        <option value="2">索尔隆德</option>
+                        <option value="3">卡利姆</option>
+                        <option value="4">彼海姆</option>
+                        <option value="5">卡塔利那</option>
+                        <option value="6">大沼</option>
+                        <option value="7">东国</option>
+                    </select>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label>个人简介：</label></td>
+                <td colspan="2"><textarea cols="45" rows="5" title=""></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="reset" name = "reset" value="重置"/></td>
+                <td><input type="submit" name = "okay" value="注册"/></td>
+            </tr>
+        </table>
+    </form>
+
+    <video controls="false" autoplay="true">
+        <source src="Key%20Sounds%20Label%20-%20潮鳴り.flac"/>
+    </video>
+</body>
+</html>

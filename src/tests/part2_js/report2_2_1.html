@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>求阶乘</title>
+    <script>
+        //求阶乘
+        function getFactorial(){
+            var input = document.getElementById("input");
+            var input_value = parseInt(input.value.trim());
+            //参数检查
+            if (isNaN(input_value) || input_value <0) {
+                alert("输入的值非法！");
+                input.value = "";
+                return;
+            }
+            var result = 1;
+            for(var i=2;i<=input_value;i++){
+                result *=i;
+            }
+            var output = document.getElementById("output");
+            output.innerHTML = result.toString();
+        }
+    </script>
+</head>
+<body>
+    <input id = "input" type="text">
+    <input type="button" value = "阶乘" onclick = "getFactorial()"><br>
+    <span id="output"></span>
+</body>
+</html>
+

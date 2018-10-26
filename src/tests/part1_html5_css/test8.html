@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script language="javascript" src = "test8.js"></script>
+    <link rel="stylesheet" type="text/css" href="test8.css"/>
+</head>
+<body>
+<div id="top">
+    <a onclick="show('cpw_page');">修改密码</a>
+    <a href = "">退出</a>
+</div>
+<div id="middle">
+
+    <div id = "middle-right">
+        <table id = "mainTable">
+            <thead>
+            <tr>
+                <td>全选</td>
+                <td>编号</td>
+                <td>姓名</td>
+                <td>性别</td>
+                <td>联系方式</td>
+                <td>备注</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" title = "选择"/></td>
+                <td>01</td>
+                <td>安里</td>
+                <td>男</td>
+                <td>亚斯特拉</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" title = "选择"/></td>
+                <td>02</td>
+                <td>尤莉亚</td>
+                <td>隆道尔</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" title = "选择"/></td>
+                <td>03</td>
+                <td>伊琳娜</td>
+                <td>卡里姆</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div id = cpw_page>
+            <form action="" method="post">
+                修改密码<br>     <!--表单标题-->
+                    <label for = "password">旧的密码：</label>
+                    <input type = "text" id = "password">
+                <br>
+                    <label for = "newPassword">新的密码：</label>
+                    <input type = "text" id = "newPassword">
+                <br>
+                    <label for = "rePassword">确认密码：</label>
+                    <input type = "text" id = "rePassword">
+                <br>
+                    <input type="submit" id="submit" value = "提交">
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <div id = "middle-left">
+        <ul>
+            <li class = "admin" onclick = "show('dept');">部门管理
+                <ul id = "dept">
+                    <li class = "add">新增</li>
+                    <li class = "del">删除</li>
+                    <li class = "mod">修改</li>
+                </ul>
+            </li>
+            <li class = "admin" onclick = "show('staff');">人事管理
+                <ul id = "staff">
+                    <li class = "add">新增</li>
+                    <li class = "del">删除</li>
+                    <li class = "mod">修改</li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+
+</div>
+
+<div id="bottom">
+
+</div>
+
+
+</body>
+</html>
