@@ -7,25 +7,24 @@
     <title>时钟</title>
     <script>
         var timer;
-
+        var span;
+        function getVars() {
+            span = document.getElementById("clock");
+        }
         function start(){
-            var span=document.getElementById("clock");
-            span.innerHTML=new Date().toLocaleTimeString();
-            timer = window.setInterval("update()",1000);
+            timer = window.setInterval(update,1000);
         }
         function update(){
-            var span=document.getElementById("clock");
             span.innerHTML=new Date().toLocaleTimeString();
         }
 
         function pause(){
-            var span=document.getElementById("clock");
             window.clearInterval(timer);
         }
 
     </script>
 </head>
-<body>
+<body onload="onLoad()">
     <input type="button" value="启动时钟" onclick="start()">
     <input type="button" value="暂停时钟" onclick="pause()"><br>
     <span id="clock"></span>

@@ -32,11 +32,9 @@
             $(".panel").click(function(e){
                 cal(e);
             });
-
             function cal(e){
                 if(e.target.nodeName!=="INPUT" )
                     return;
-
                 var screen = $("#screen");
                 var et = $(e.target);
                 if(et.val()==="C"){
@@ -50,7 +48,7 @@
                     }
                 }else{
                     //原有字符串+新增字符串
-                    screen.text(screen.text() + et.val());
+                    screen.text(screen.text()+et.val());
                 }
             }
         });

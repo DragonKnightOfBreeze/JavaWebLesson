@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>美食</title>
+<style>
+    .navbar-brand {
+        padding: 0;
+    }
+    .navbar-default {
+        background: none;
+        border: none;
+    }
+    .navbar-collapse ul li:hover {
+        background-color: #888;
+    }
+    .carousel{
+        width:64%;
+        margin:auto;
+    }
+    .item{
+        width:100%;
+        height:100%;
+    }
+    #body{
+        text-align:center;
+    }
+    .tab-content img{
+        padding:25px;
+        width:290px;
+        height:250px;
+        margin:auto;
+        text-align:center;
+    }
+    .media{
+        border:2px solid darkgray;
+        border-radius: 15px;
+    }
+    .media-body{
+        padding: 25px;
+        text-align: left;
+    }
+    .media-left img{
+        width: 145px;
+        height: 125px;
+    }
+    .jumbotron img{
+        width: 580px;
+        height: 500px;
+    }
+
+
+</style>
+
+<!--媒体列表，图片巨幕-->
+
+<body>
+<div class="container">
+    <div id="top">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!--导航条头部-->
+                <div class="navbar-header">
+                    <!--插入图片式链接-->
+                    <a class="navbar-brand" href="#"><img src="test2_assets/logo.jpg" alt="Brand"></a>
+                </div>
+                <!--导航条主体-->
+                <div class="collapse navbar-collapse">
+                    <!--导航条导航标签-->
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">菜谱</a></li>
+                        <li><a href="#">食材</a></li>
+                        <li><a href="#">珍选</a></li>
+                        <li><a href="#">健康</a></li>
+                        <li><a href="#">专题</a></li>
+                        <li><a href="#">社区</a></li>
+                    </ul>
+                    <!--导航条表单，右对齐-->
+                    <form class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div id="body">
+        <!--轮播图-->
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!--轮播图图片的指标，也就是图片偏下部分的点点点-->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+            <!--轮播图图片，以及它们的描述文字-->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="test2_assets/food05.jpg">
+                    <div class="carousel-caption">
+                        <h3>海鲜类</h3>
+                        <p>好吃的贝贝</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="test2_assets/food02.jpg">
+                    <div class="carousel-caption">
+                        <h3>海鲜类</h3>
+                        <p>清炒小龙虾</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="test2_assets/food03.jpg">
+                    <div class="carousel-caption">
+                        <h3>瓜果类</h3>
+                        <p>玲珑南瓜盘/p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="test2_assets/food04.jpg">
+                    <div class="carousel-caption">
+                        <h3>面食类</h3>
+                        <p>大盘馅饼</p></div>
+                </div>
+            </div>
+            <!--轮播图图片的左右切换控制条-->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <!-- 标签页 -->
+        <div>
+            <!--分页标签-->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#home" aria-controls="home" role="tab" data-toggle="tab">新秀菜谱</a>
+                </li>
+                <li role="presentation">
+                    <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">一周热门</a>
+                </li>
+                <li role="presentation">
+                    <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">最受欢迎家常菜</a>
+                </li>
+            </ul>
+
+            <!--分页内容-->
+            <div class="tab-content">
+
+                <div role="tabpanel" class="tab-pane active" id="home">
+                    <table>
+                        <tr>
+                            <td><img src="test2_assets/food06.jpg"><p>红烧排骨</p></td>
+                            <td><img src="test2_assets/food07.jpg"><p>肉片</p></td>
+                            <td><img src="test2_assets/food08.jpg"><p>酱香烤鸭</p></td>
+                            <td><img src="test2_assets/food09.jpg"><p>馅饼塔</p></td>
+                        </tr>
+                        <tr>
+                            <td><img src="test2_assets/food10.jpg"><p>香干拼盘</p></td>
+                            <td><img src="test2_assets/food11.jpg"><p>香菇炖肉汤</p></td>
+                            <td><img src="test2_assets/food12.jpg"><p>肉丸木桶</p></td>
+                            <td><img src="test2_assets/food13.jpg"><p>拔丝酱面</p></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--待编写，使用媒体列表-->
+                <div role="tabpanel" class="tab-pane" id="profile">
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food01.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food02.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food03.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food04.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food05.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food06.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food07.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-left media-middle"><a href="#"><img class="media-object" src="test2_assets/food08.jpg"></a></div>
+                        <div class="media-body">
+                            <h4 class="media-heading">菜谱描述</h4>
+                            <p>菜谱描述</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="messages">
+                    <!--待编写，使用巨幕-->
+                    <div class="jumbotron">
+                        <h1>今日最热的菜谱</h1>
+                        <p><img src="test2_assets/food02.jpg"> </p>
+                        <p>菜谱描述</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    footer
+</div>
+</body>
+</html>

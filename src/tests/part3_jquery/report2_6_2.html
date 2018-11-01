@@ -42,20 +42,20 @@
     <script>
         $(function(){
             $(":button[value='>']").click(function(){
-                var selected = $("#left select option:selected");
-                $("#right select").append(selected);
+                // var selected = $("#left select option:selected");
+                $("#right select").append($("#left option:selected"));
             });
             $(":button[value='>>']").click(function(){
-                var all = $("#left select option");
-                $("#right select").append(all);
+                // var all = $("#left select option");
+                $("#right select").append($("#left option"));
             });
             $(":button[value='<']").click(function(){
-                var selected = $("#right option:selected");
-                $("#left select").append(selected);
+                // var selected = $("#right option:selected");
+                $("#left select").append($("#right option:selected"));
             });
             $(":button[value='<<']").click(function(){
-                var all = $("#right select option");
-                $("#left select").append(all);
+                // var all = $("#right select option");
+                $("#left select").append($("#right option"));
             });
         });
     </script>

@@ -16,15 +16,9 @@
         }
         function doSort2(value){
             var array=value.split(",");
-            var result = array.sort(compare);
+            var result = array.sort(function(a,b){return a-b;});
             alert("排序（数值）后的数组："+result.join(","));
         }
-
-        function compare(a,b){
-            return a-b;
-        }
-
-
     </script>
 </head>
 <body>

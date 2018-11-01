@@ -7,7 +7,7 @@
         //动态生成一个隔行换色的表格
         var rowNum=1;
         var colNum=1;
-        function getArg(){
+        function getArgs(){
             var flag= true;     //是否需要继续输入
             while(flag) {
                 rowNum = prompt("请输入行数：");
@@ -18,7 +18,6 @@
                     alert("输入的值有误，请重新输入。");
             }
         }
-
         function generateTable(){
             document.write("<table>");
             for(var i=1;i<=rowNum;i++){
@@ -36,6 +35,6 @@
         }
     </script>
 </head>
-<body onload="getArg();generateTable();">
+<body onload="getArgs();generateTable();">
 </body>
 </html>

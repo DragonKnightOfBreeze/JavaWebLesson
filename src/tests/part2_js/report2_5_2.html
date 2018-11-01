@@ -9,16 +9,14 @@
         var addBtn;
         var textarea;
 
-        function load(){
+        function getVars(){
             deleteBtn = document.getElementById("delete");
             addBtn=document.getElementById("add");
             textarea=document.getElementById("textarea");
         }
-
         function doAdd(){
             deleteBtn.disabled = false;
             addBtn.disabled = true;
-
             document.body.appendChild(temp);
             temp = null;
             // textarea.innerHTML = temp;
@@ -27,7 +25,6 @@
         function doDelete(){
             addBtn.disabled = false;
             deleteBtn.disabled = true;
-
             temp = textarea;
             textarea.remove();
             // textarea.parentNode.removeChild(textarea);
@@ -37,7 +34,7 @@
     </script>
 </head>
 
-<body onload="load()">
+<body onload="getVars()">
     <input type="button" id="add" value="增加" disabled="disabled" onclick="doAdd()">
     <input type="button" id="delete" value="删除" onclick="doDelete()"><br>
     <textarea id="textarea" cols="50" rows="3">被控制的目标元素</textarea>

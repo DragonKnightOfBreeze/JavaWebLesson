@@ -29,12 +29,11 @@
     <script src="jquery-3.3.1.js"></script>
     <script>
         var index = 0;
-
         $(function(){
             window.setInterval(function(){
                 $("#images li").eq(index).hide();
                 index = (index+1)%5;
-                $("#images li").eq(index) .show();
+                $("#images li").eq(index).show();
             },1000);
         });
 
