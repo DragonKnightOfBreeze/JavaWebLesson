@@ -1,0 +1,17 @@
+一.	安装JDK
+1.	下载  官网  
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
+2.	运行安装 
+3.	环境变量配置（W-window系统 --  此电脑 –更多—属性 ）
+ https://jingyan.baidu.com/article/02027811629b941bcc9ce521.html
+JAVA_HOME  jdk安装位置
+CLASSPATH   .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;”
+PATH 添加  ;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;  win10不用分号
+    4.测试 W – windowspowershell – javac     java -version 
+
+二．安装eclipse
+   1.下载 官网 
+     https://www.eclipse.org/downloads/
+   2.运行安装 
+   3.配置jdk  windows – preference – java – installJres – add
+

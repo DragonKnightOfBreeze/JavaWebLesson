@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>document事件</title>
+    <script type="text/javascript">      
+     function welcome(){
+        alert("欢迎访问本页！");  
+      }     
+      window.onbeforeunload = function(){ return "";}
+      window.onunload = function(){ console.log("退出");}
+    </script>
+  </head>
+  <body  onload="welcome();" >
+    <p>按F5刷新页面</p>
+    <p>本代码存在浏览器兼容问题，请在IE浏览器下测试</p>
+    <p>说明:</p>
+    <p>1、页面加载时只执行onload</p>
+    <p>2、页面关闭时，先执行onbeforeunload，再执行onunload</p>
+    <p>3、页面刷新时，先执行onbeforeunload，再执行onunload，最后执行onload</p>
+    <p>此代码仅适合刷新，请自行百度“关闭和刷新”的判断</p>
+  </body>
+</html>
+

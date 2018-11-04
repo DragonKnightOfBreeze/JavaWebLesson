@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>访问表单控件</title>
+    <script type="text/javascript">
+      function sel(obj){
+        alert("你选择的是："+obj.options[obj.selectedIndex].text);
+        alert("其值是："+obj.options[obj.selectedIndex].value);
+      }
+    </script>
+  </head>
+  <body> 
+    <form name="form1">
+      <select name="a" size="1" onchange="sel(this)">
+        <option value="xx">信息学院</option>
+        <option value="jc">机材学院</option>
+        <option value="kj">会计学院</option>
+        <option value="wy">外语学院</option>
+      </select>
+    </form>
+  </body>
+</html>

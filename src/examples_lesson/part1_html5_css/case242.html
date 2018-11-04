@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>圆角边框</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <style type="text/css">
+      /*div样式*/
+      .a1{color:#006;width:100px;height:100px;padding:20px;border:5px solid #963;}
+      .a2{color:#006;width:100px;height:200px;padding:20px;border:5px solid #963;}
+      .a3{color:#006;width:0px;height:0px;border:120px solid #963;border-right-color:#ccc;}
+      /*不区分水平半径与垂直半径*/
+      #b1{border-radius:20px;}
+      #b2{border-radius:20px 30px}
+      #b3{border-radius:20px 30px 40px;}
+      #b4{border-radius:20px 30px 40px 50px;}
+      /*区分水平半径与垂直半径*/
+      #c1{border-radius:20px/40px;}
+      #c2{border-radius: 10px 20px 30px 40px / 40px 30px 20px 10px;}
+      /*单角设置*/
+      #d1{border-top-left-radius:20px;}
+      #d2{border-top-right-radius:20px;}
+      #d3{border-bottom-right-radius:20px;}
+      #d4{border-bottom-left-radius:20px;}
+      /*特殊效果*/
+      #e1{border-radius:120px;}
+      #e2{border-radius:120px;}
+      #e3{border-radius:120px;}
+    </style>
+  </head>
+  
+  <body>
+    <table>
+      <tr>
+        <td><div id="b1" class="a1">单边等半径设置</div></td>
+        <td><div id="b2" class="a1">双边等半径设置</div></td>
+        <td><div id="b3" class="a1">三边等半径设置</div></td>
+        <td><div id="b4" class="a1">四边等半径设置</div></td>
+      </tr>
+      <tr>
+        <td><div id="c1" class="a1">四边不等半径同时设置</div></td>
+        <td><div id="c2" class="a1">四边不等半径分别设置</div></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><div id="d1" class="a1">单角设置</div></td>
+        <td><div id="d2" class="a1">单角设置</div></td>
+        <td><div id="d3" class="a1">单角设置</div></td>
+        <td><div id="d4" class="a1">单角设置</div></td>
+      </tr>
+      <tr>
+        <td><div id="e1" class="a2">椭圆特效</div></td>
+        <td><div id="e2" class="a1">正圆特效</div></td>
+        <td colspan="2"><div id="e3" class="a3" >缺口特效</div></td>
+      </tr>
+    </table>
+  </body>
+</html>

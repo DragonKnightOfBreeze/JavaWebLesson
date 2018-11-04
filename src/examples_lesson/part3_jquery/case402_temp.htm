@@ -1,0 +1,85 @@
+<html>
+  <head>
+  	<title>
+  	    jquery选择器 	
+  	</title> 
+  	<script type="text/javascript"  src="jquery-3.1.1.min.js"></script>
+  	<style type="text/css">
+  		.imp{
+  		color:red;  		
+  		}
+  	</style> 	
+  </head>
+  <body> 
+    <!-- 1.演示元素选择器 --> 
+     <div id="d1">
+     	<h1>jquery选择器</h1>
+     	<p>包括如下种类</p>
+     	<p>1.基本选择器</p>
+     	<p class="imp">2.层次选择器</p>
+        <p class="imp">3.过滤选择器</p>
+        <p>4.表单选择器</p>
+        <p style="display:none">5.其它选择器</p>     
+     </div>
+      <!-- 2.演示层次选择器 --> 
+      <div id="d2">
+        <ul> 
+        	<li>南昌</li>
+        	<li id="jj">九江
+        	     <ol>
+                   <li>浔阳区</li>
+                   <li>濂溪区</li>  
+           	     </ol>        	
+        	</li>
+            <li>赣州</li>
+            <li>鹰潭</li>
+        </ul>       
+      </div>
+      <!-- 3.演示过滤选择器   4.表单选择器 --> 
+       <div id="d3">
+        <table border="1">
+           <tr >
+             <td>序号</td>
+             <td>课程编号</td>
+             <td>课程名称</td>
+             <td>任课教师</td>
+           </tr>
+             <tr id="tr2">
+             <td>1</td>
+             <td>1440</td>
+             <td>javaweb开发</td>
+             <td>袁老师</td>
+           </tr>
+            <tr>
+             <td>2</td>
+             <td>1432</td>
+             <td>C程序设计</td>
+             <td>章老师</td>
+           </tr>
+           <tr>
+             <td>3</td>
+             <td>1442</td>
+             <td>数据结构</td>
+             <td>刘老师</td>
+           </tr>       
+        </table>
+      </div>
+      <div>
+        <p>国籍:<input type="text" value="中国"  disabled/></p>
+        <p>账号:<input type="text" /></p>
+        <p>密码:<input type="password" /></p>
+        <p>爱好:<input type="checkbox"  checked/>运动  <input type="checkbox" />音乐
+           <input type="checkbox" />美术        
+        </p>
+        <p>
+         <select>
+           <option>小学</option>
+           <option>初中</option>
+           <option>高中</option>
+           <option>大专</option>
+           <option>本科</option>        
+         </select>        
+        </p>
+      </div>
+  </body>
+</html>

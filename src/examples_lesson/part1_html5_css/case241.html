@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>边框设置</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <style type="text/css">
+      /* border四边设置 ,块元素也可设置宽高*/
+      .b1{border: 1px dashed #ff0000;
+          width:500px;height:100px;}
+      /*border单边设置*/
+      .b2{border-left:2px solid #00ff00;
+          border-bottom:10px double #00ff00;
+          width:500px;height:100px;}
+    </style>
+  </head>
+  
+  <body>
+    <p class="b1">border-块级元素的边框设置，四边设置格式为：
+      <br>border:width style color
+    </p>
+    <p class="b2">border即可设置四边，也可设置单边，单边设置格式为：
+      <br> -border-left: width值、style值、color值
+      <br> -border-right: width值、style值、color值
+      <br> -border-top: width值、style值、color值
+      <br> -border-bottom: width值、style值、color值
+    </p>
+  </body>
+</html>

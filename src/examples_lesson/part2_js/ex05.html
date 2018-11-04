@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>         
+  <head>
+    <title>ex05.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript">
+        function cal(){
+          var string = document.getElementById("input").value;
+          var result = new Array();
+          result[0] = new Array(2);
+          result[0][0] = string.charAt(0);
+          result[0][1]=1;
+          
+          for(var i=1;i<string.length;i++){
+            var char = string.charAt(i);
+            var flag = 0;      
+            for(var j=0;j<result.length;j++){
+              alert(result.length);
+              if(char==result[j][0]){ 
+                 flag = 1;               
+                 result[j][1]=result[j][1]+1;                 
+                 break;              
+              }
+            }
+            if(flag==0){
+             result.push([char,1]); 
+             //这里写错了，添加一个元素需加方括号，sorry           
+             }          
+          } 
+          alert(result.toString());        
+        
+        }        
+    </script>
+
+  </head>
+  
+  <body>
+    <input type="text"  id="input" onblur="cal();"/>
+    
+  </body>
+</html>

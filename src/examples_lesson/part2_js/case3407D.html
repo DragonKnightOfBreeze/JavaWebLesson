@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>访问关系节点</title>
+    <script type="text/javascript">
+      function s(){
+        var r=document.getElementById("p2");
+        alert("当前点是："+r.id);
+        alert("p2的父节点是："+r.parentNode.nodeName);
+        alert("p2的前兄弟节点是："+r.previousSibling.id);
+        alert("p2的后兄弟节点是："+r.nextSibling.id);       
+      }
+    </script>
+    <style>
+      .cla{
+       color:blue;
+       font-size:30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <!-- 注释节点 -->
+      <li id="p1" ><b>第1段</b></li>     
+      <li id="p2">第2段</li>      
+      <li id="p3">第3段</li>
+            
+    </ul>
+    <input type="button" value="判断" onclick="s();">
+  </body>
+</html>
