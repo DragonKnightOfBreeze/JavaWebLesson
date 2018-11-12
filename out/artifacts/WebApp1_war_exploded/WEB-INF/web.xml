@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <!--Servlet名称-->
+        <servlet-name>HelloWorld</servlet-name>
+        <!--完整的类名-->
+        <servlet-class>tests.HelloWorld</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!--Servlet名称-->
+        <servlet-name>HelloWorld</servlet-name>
+        <!--对外访问的虚拟路径，以斜线开始-->
+        <url-pattern>/hello-world</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetDate</servlet-name>
+        <servlet-class>tests.GetDate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetDate</servlet-name>
+        <url-pattern>/get-date</url-pattern>
+    </servlet-mapping>
+
+    <!--首页列表-->
+    <welcome-file-list>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+</web-app>
+
