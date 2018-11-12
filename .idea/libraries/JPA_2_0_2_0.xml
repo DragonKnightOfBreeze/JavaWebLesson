@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="jquery-3.3.1" type="kotlin.js">
+  <library name="JPA 2.0-2.0">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/references/jquery-3.3.1.js" />
+      <root url="jar://$PROJECT_DIR$/WebApp/lib/javax.persistence.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
