@@ -26,12 +26,70 @@
         <url-pattern>/get-date</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Test1</servlet-name>
+        <servlet-class>tests.part6_servlet.Test1</servlet-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test1</servlet-name>
+        <url-pattern>/test1</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>add</servlet-name>
+        <servlet-class>tests.part8_jdbc.AddInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>add</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>list-info</servlet-name>
+        <servlet-class>tests.part8_jdbc.example1.ListInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>list-info</servlet-name>
+        <url-pattern>/list-info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>delete-info</servlet-name>
+        <servlet-class>tests.part8_jdbc.example1.DeleteInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>delete-info</servlet-name>
+        <url-pattern>/delete-info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>edit-info</servlet-name>
+        <servlet-class>tests.part8_jdbc.example1.EditInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>edit-info</servlet-name>
+        <url-pattern>/edit-info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>modify-info</servlet-name>
+        <servlet-class>tests.part8_jdbc.example1.ModifyInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>modify-info</servlet-name>
+        <url-pattern>/modify-info</url-pattern>
+    </servlet-mapping>
+
+
     <!--首页列表-->
     <welcome-file-list>
         <welcome-file>index.htm</welcome-file>
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-
 </web-app>
 

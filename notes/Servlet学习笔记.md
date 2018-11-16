@@ -55,3 +55,15 @@
 设置自动加载Servlet程序
 在servlet元素中加上一个load-on-startup子元素，其中的值为正数，表示优先级。
 
+设置初始化参数（在Servlet标签里面，每个init-param标签只能写一对）
+```xml
+<init-param>
+	<param-name>encoding</param-name>
+	<param-value>utf-8</param-value>
+</init-param>
+```
+
+一般来说，load-on-startup标签要放在前面。
+
+`res.sendRedirect(url);`：重定向。  
+清空respose，然后再将状态码302和地址返回到浏览器。意味着浏览器会自动地向服务器提出第二次请求
