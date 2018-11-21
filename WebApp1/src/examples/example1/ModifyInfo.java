@@ -1,10 +1,9 @@
-package tests.part8_jdbc.example1;
+package examples.example1;
 
-import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
-import static tests.part8_jdbc.example1.Consts.*;
+import static examples.Consts.*;
 
 public class ModifyInfo extends HttpServlet {
 	@Override
@@ -13,12 +12,12 @@ public class ModifyInfo extends HttpServlet {
 		resp.setContentType("text/html;charset=utf-8");
 		PrintWriter out = resp.getWriter();
 
-		var lastId = Integer.parseInt(req.getParameter("lastId"));
 		var id = Integer.parseInt(req.getParameter("id"));
-		var name = req.getParameter("name");
-		var score = Integer.parseInt(req.getParameter("score"));
+		var stuId = req.getParameter("stuId").trim();
+		var name = req.getParameter("name").trim();
+		var score = Integer.parseInt(req.getParameter("score").trim());
 
-		String sql = "update Student set id=?,name=?,score=? where id=?";
+		String sql = "update Student set stuId=?,name=?,score=? where id=?";
 
 		try{
 			Class.forName(DRIVER);
@@ -27,10 +26,10 @@ public class ModifyInfo extends HttpServlet {
 			out.println("数据库连接成功！<br>");
 
 			var pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1,id);
+			pstmt.setString(1,stuId);
 			pstmt.setString(2,name);
 			pstmt.setInt(3,score);
-			pstmt.setInt(4,lastId);
+			pstmt.setInt(4,id);
 			pstmt.executeUpdate();
 
 			out.println("修改成功！<br>");

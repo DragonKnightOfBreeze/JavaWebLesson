@@ -1,4 +1,4 @@
-package tests.part8_jdbc.example1;
+package examples;
 
 public class Consts {
 	//定义MySQL数据库的驱动程序

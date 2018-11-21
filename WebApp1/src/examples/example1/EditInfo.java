@@ -1,10 +1,9 @@
-package tests.part8_jdbc.example1;
+package examples.example1;
 
-import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
-import static tests.part8_jdbc.example1.Consts.*;
+import static examples.Consts.*;
 
 public class EditInfo extends HttpServlet {
 	@Override
@@ -14,7 +13,7 @@ public class EditInfo extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 
 		var id = Integer.parseInt(req.getParameter("id"));
-		String sql = "select id,name,score from Student where id=?";
+		String sql = "select stuId,name,score from Student where id=?";
 
 		try{
 			Class.forName(DRIVER);
@@ -27,15 +26,15 @@ public class EditInfo extends HttpServlet {
 			var rs = pstmt.executeQuery();
 
 			if(rs.next()){
-				var tempId = rs.getInt(1);
-				var tempName = rs.getString(2);
-				var tempScore = rs.getInt(3);
+				var stuId = rs.getString(1);
+				var name = rs.getString(2);
+				var score = rs.getInt(3);
 				out.println("<form method='post' action='modify-info'>" +
-						"<p>lastId:"+tempId+"+</p>"+
-						"<p>id:<input type='text' name='id' value='"+tempId+"'></p>"+
-						"<p>name:<input type='text' name='name'  value='"+tempName+"'></p>"+
-						"<p>score:<input type='text' name='score'  value='"+tempScore+"'></p>"+
-						"<input type='hidden' name='lastId' value='"+tempId+"'>"+
+						"<p>StuId:"+stuId+"+</p>"+
+						"<p>stuId:<input type='text' name='stuId' value='"+stuId+"'></p>"+
+						"<p>name:<input type='text' name='name' value='"+name+"'></p>"+
+						"<p>score:<input type='text' name='score' value='"+score+"'></p>"+
+						"<input type='hidden' name='id' value='"+id+"'>"+
 						"<p><input type='submit' value='提交'></p>"+
 						"</form>");
 			}

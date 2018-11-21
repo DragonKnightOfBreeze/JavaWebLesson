@@ -1,10 +1,9 @@
-package tests.part8_jdbc.example1;
+package examples.example1;
 
-import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
-import static tests.part8_jdbc.example1.Consts.*;
+import static examples.Consts.*;
 
 public class DeleteInfo extends HttpServlet {
 	@Override

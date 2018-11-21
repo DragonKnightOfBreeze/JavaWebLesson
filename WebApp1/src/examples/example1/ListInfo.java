@@ -1,10 +1,9 @@
-package tests.part8_jdbc.example1;
+package examples.example1;
 
-import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
-import static tests.part8_jdbc.example1.Consts.*;
+import static examples.Consts.*;
 
 public class ListInfo extends HttpServlet {
 	@Override
@@ -13,7 +12,7 @@ public class ListInfo extends HttpServlet {
 		resp.setContentType("text/html;charset=utf-8");
 		PrintWriter out = resp.getWriter();
 
-		String sql = "select id,name,score from Student";
+		String sql = "select id,stuId,name,score from Student";
 
 		try {
 			Class.forName(DRIVER);
@@ -26,22 +25,35 @@ public class ListInfo extends HttpServlet {
 
 			out.print("<table>");
 			out.println("<tr>");
-			out.println("<td>id</td>");
+			out.println("<td>stuId</td>");
 			out.println("<td>name</td>");
 			out.println("<td>score</td>");
+			out.println("<td>operate</td>");
 			out.println("</tr>");
 			while(rs.next()){
 				var id = rs.getInt("id");
+				var stuId = rs.getString("stuId");
 				var name = rs.getString("name");
 				var score = rs.getInt("score");
 				out.println("<tr>");
-				out.println(String.format("<td>%d</td>", id));
+				out.println(String.format("<td>%s</td>", stuId));
 				out.println(String.format("<td>%s</td>", name));
 				out.println(String.format("<td>%d</td>", score));
 				out.println(String.format("<td><a href='delete-info?id=%d'>删除</a>&emsp;<a href='edit-info?id=%d'>修改</a></td>",id,id));
 				out.println("</tr>");
 			}
-			out.print("</table>");
+			out.println("</table>");
+
+			out.println("<form method='post' action='add-info'>");
+			out.println("<table>");
+			out.println("<tr>");
+			out.println("<td><input type='text' name='addStuId'></td>");
+			out.println("<td><input type='text' name='addName'></td>");
+			out.println("<td><input type='text' name='addScore'></td>");
+			out.println("<td><input type='submit' value='添加数据'></a></td>");
+			out.println("</tr>");
+			out.println("</table>");
+			out.println("</form>");
 
 			out.println("操作成功！<br>");
 			pstmt.close();

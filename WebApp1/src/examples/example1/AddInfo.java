@@ -1,11 +1,9 @@
-package tests.part8_jdbc;
+package examples.example1;
 
-import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.*;
-
-import static tests.part8_jdbc.Consts.*;
+import static examples.Consts.*;
 
 public class AddInfo extends HttpServlet {
 	@Override
@@ -14,26 +12,30 @@ public class AddInfo extends HttpServlet {
 		resp.setContentType("text/html;charset=utf-8");
 		PrintWriter out = resp.getWriter();
 
-		String sql = "insert into Student(name,score)"+"values(?,?)";
-		String name = req.getParameter("name");
-		int score = Integer.parseInt(req.getParameter("score"));
+		var	stuId = req.getParameter("addId").trim();
+		var name = req.getParameter("addName").trim();
+		var score = Integer.parseInt(req.getParameter("addScore").trim());
+		String sql = "insert into Student (stuId,name,score) values(?,?,?)";
 
 		try{
 			Class.forName(DRIVER);
-			out.print("数据库加载成功！<br>");
+			out.println("数据库加载成功！<br>");
 			Connection con = DriverManager.getConnection(URL,USER,PW);
-			out.println("数据库连接成功！");
+			out.println("数据库连接成功！<br>");
 
 			var pstmt = con.prepareStatement(sql);
-			pstmt.setString(1,name);
-			pstmt.setInt(2,score);
+			pstmt.setString(1,stuId);
+			pstmt.setString(2,name);
+			pstmt.setInt(3,score);
 			pstmt.executeUpdate();
 
 			pstmt.close();
 			con.close();
+
+			resp.sendRedirect("list-info");
 		}catch (Exception e){
+			out.println("操作失败！<br>");
 			e.printStackTrace();
-			out.print("数据库连接失败！<br>");
 		}
 	}
 }

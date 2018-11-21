@@ -41,7 +41,7 @@
 
     <servlet>
         <servlet-name>add</servlet-name>
-        <servlet-class>tests.part8_jdbc.AddInfo</servlet-class>
+        <servlet-class>tests.part6_servlet.example1.AddInfo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>add</servlet-name>
@@ -50,7 +50,7 @@
 
     <servlet>
         <servlet-name>list-info</servlet-name>
-        <servlet-class>tests.part8_jdbc.example1.ListInfo</servlet-class>
+        <servlet-class>tests.part6_servlet.example1.ListInfo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>list-info</servlet-name>
@@ -59,7 +59,7 @@
 
     <servlet>
         <servlet-name>delete-info</servlet-name>
-        <servlet-class>tests.part8_jdbc.example1.DeleteInfo</servlet-class>
+        <servlet-class>tests.part6_servlet.example1.DeleteInfo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>delete-info</servlet-name>
@@ -68,7 +68,7 @@
 
     <servlet>
         <servlet-name>edit-info</servlet-name>
-        <servlet-class>tests.part8_jdbc.example1.EditInfo</servlet-class>
+        <servlet-class>tests.part6_servlet.example1.EditInfo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>edit-info</servlet-name>
@@ -77,13 +77,21 @@
 
     <servlet>
         <servlet-name>modify-info</servlet-name>
-        <servlet-class>tests.part8_jdbc.example1.ModifyInfo</servlet-class>
+        <servlet-class>tests.part6_servlet.example1.ModifyInfo</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>modify-info</servlet-name>
         <url-pattern>/modify-info</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>add-info</servlet-name>
+        <servlet-class>tests.part6_servlet.example1.AddInfo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>add-info</servlet-name>
+        <url-pattern>/add-info</url-pattern>
+    </servlet-mapping>
 
     <!--首页列表-->
     <welcome-file-list>
