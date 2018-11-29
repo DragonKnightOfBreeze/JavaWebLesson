@@ -1,15 +1,12 @@
 package examples.example2.Controller;
 
 import examples.example2.DAO.StudentDAO;
-import examples.example2.POJO.Student;
-import examples.example2.Utils.DBUtils;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
 
 public class EditInfo extends HttpServlet {
 	@Override

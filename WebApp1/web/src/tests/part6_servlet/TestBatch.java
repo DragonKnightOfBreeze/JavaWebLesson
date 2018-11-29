@@ -2,7 +2,6 @@ package tests.part6_servlet;
 
 import examples.example2.Utils.DBUtils;
 
-import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*;
 import java.sql.Connection;

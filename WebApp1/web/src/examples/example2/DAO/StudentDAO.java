@@ -1,6 +1,5 @@
 package examples.example2.DAO;
 
-import com.mysql.cj.protocol.Resultset;
 import examples.example2.POJO.Student;
 import examples.example2.Utils.DBUtils;
 
