@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟银行转账</title>
+</head>
+<body>
+    <form action="/tests/transfer" method="post">
+        <table>
+            <tr>
+                <td>转账人：</td>
+                <td><input type="text" name="account_from"></td>
+            </tr>
+            <tr>
+                <td>收款人：</td>
+                <td><input type="text" name="account_to"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>金额：</td>
+                <td><input type="text" name="amount"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="取消"></td>
+                <td><input type="submit" value="确定"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

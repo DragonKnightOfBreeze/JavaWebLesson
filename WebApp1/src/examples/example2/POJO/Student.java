@@ -4,16 +4,25 @@ package examples.example2.POJO;
  * 模型类
  */
 public class Student {
-	private int stuId;
+	private int id;
+	private String stuId;
 	private String name;
 	private int score;
 
 
-	public int getStuId() {
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getStuId() {
 		return stuId;
 	}
 
-	public void setStuId(int stuId) {
+	public void setStuId(String stuId) {
 		this.stuId = stuId;
 	}
 
@@ -33,8 +42,20 @@ public class Student {
 		this.score = score;
 	}
 
+
+	public Student(){}
+
+	public Student(int id,String stuId,String name,int score){
+		this.id=id;
+		this.stuId=stuId;
+		this.name=name;
+		this.score=score;
+	}
+
+
 	@Override
 	public String toString() {
-		return "id:"+ stuId +"\tname:"+name+"\tscore:"+score;
+		return "stuId:" + stuId + "\tname:" + name + "\tscore:" + score;
 	}
+
 }

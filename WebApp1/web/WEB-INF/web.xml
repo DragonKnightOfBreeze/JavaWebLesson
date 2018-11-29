@@ -14,7 +14,7 @@
         <!--Servlet名称-->
         <servlet-name>HelloWorld</servlet-name>
         <!--对外访问的虚拟路径，以斜线开始-->
-        <url-pattern>/hello-world</url-pattern>
+        <url-pattern>/tests/hello-world</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -23,7 +23,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>GetDate</servlet-name>
-        <url-pattern>/get-date</url-pattern>
+        <url-pattern>/tests/get-date</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -36,16 +36,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Test1</servlet-name>
-        <url-pattern>/test1</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>add</servlet-name>
-        <servlet-class>examples.example1.AddInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>add</servlet-name>
-        <url-pattern>/add</url-pattern>
+        <url-pattern>/tests/test1</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -91,6 +82,33 @@
     <servlet-mapping>
         <servlet-name>add-info</servlet-name>
         <url-pattern>/add-info</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>doTransfer</servlet-name>
+        <servlet-class>tests.part6_servlet.DoTransfer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doTransfer</servlet-name>
+        <url-pattern>/tests/transfer</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>batch</servlet-name>
+        <servlet-class>tests.part6_servlet.TestBatch</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>batch</servlet-name>
+        <url-pattern>/tests/batch</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>page</servlet-name>
+        <servlet-class>tests.part6_servlet.TestPage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>page</servlet-name>
+        <url-pattern>/tests/page</url-pattern>
     </servlet-mapping>
 
     <!--首页列表-->
