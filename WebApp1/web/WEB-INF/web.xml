@@ -111,6 +111,15 @@
         <url-pattern>/tests/page</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>examples_book.task_register.controller.ControllerServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/controller-servlet</url-pattern>
+    </servlet-mapping>
+
     <!--首页列表-->
     <welcome-file-list>
         <welcome-file>index.htm</welcome-file>

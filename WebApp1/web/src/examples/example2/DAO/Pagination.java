@@ -28,8 +28,36 @@ public class Pagination {
 				student.setName(rs.getString("name"));
 				student.setScore(rs.getInt("score"));
 				studentList.add(student);
-				rs.next();
+				if(!rs.next())
+					break;
 			}
+			return studentList;
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public ArrayList<Student> truePage(int pageIndex , int pageSize){
+		ArrayList<Student> studentList = new ArrayList<>();
+		Connection con = DBUtils.getConnection();
+		String sql = "select id,stuId,name,score from Student limit ?,?";
+		PreparedStatement pstmt = null;
+		try{
+			pstmt= con.prepareStatement(sql);
+			pstmt.setInt(1,(pageIndex-1)*pageSize);	//第1页从0开始，第2页从page*pageSIze开始
+			pstmt.setInt(2,pageSize);			//取pageSize个
+			ResultSet rs = pstmt.executeQuery();	//不足pageSize个也没关系
+
+			while(rs.next()) {
+				Student student = new Student();
+				student.setId(rs.getInt("id"));
+				student.setStuId(rs.getString("stuId"));
+				student.setName(rs.getString("name"));
+				student.setScore(rs.getInt("score"));
+				studentList.add(student);
+			}
+			return studentList;
 		}catch(Exception e){
 			e.printStackTrace();
 		}
