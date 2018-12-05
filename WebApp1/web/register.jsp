@@ -1,4 +1,4 @@
-<%--@elvariable id="formBean" type="examples_book.task_register.domain.RegisterFormBean"--%>
+<%--@elvariable id="formBean" type="examples_book.task_register.example3.domain.RegisterFormBean"--%>
 <%--@elvariable id="DBMsg" type="java.lang.String"--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>

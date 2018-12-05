@@ -193,19 +193,19 @@ import org.xml.sax.helpers.*;
 public class MySAXParser extends DefaultHandler {
 	/**文档开始*/
 	@Override
-	public void startDocument() throws SAXException {
+	public void startDocument()  {
 		System.out.println("<?xml version = \"1.0\" encoding = \"UTF-8\" ?>");
 	}
 	
 	/**文档结束*/
 	@Override
-	public void endDocument() throws SAXException {
+	public void endDocument()  {
 		System.out.println("\n文档读取结束。");
 	}
 	
 	/**元素开始*/
     @Override
-    public void startElement(String url, String localName, String name, Attributes attributes) throws SAXException {
+    public void startElement(String url, String localName, String name, Attributes attributes)  {
 		System.out.print("<");
 		//输出元素名称
 		System.out.print(name);
@@ -220,14 +220,14 @@ public class MySAXParser extends DefaultHandler {
     
     /**元素结束*/
     @Override
-    public void endElement(String url, String localName, String name) throws SAXException {
+    public void endElement(String url, String localName, String name)  {
     	//输出元素名称
     	System.out.print("</" +name + ">");
     }
     
     /**取得元素内容*/
     @Override
-    public void characters(char[] ch,int start, int length) throws SAXException { 
+    public void characters(char[] ch,int start, int length)  { 
     	System.out.print(new String(ch, start, length));
     }
 }   

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+<example3.web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/example3.web-app_4_0.xsd"
          version="4.0">
 
     <servlet>
@@ -39,50 +39,50 @@
         <url-pattern>/tests/test1</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>list-info</servlet-name>
-        <servlet-class>examples.example1.ListInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>list-info</servlet-name>
-        <url-pattern>/list-info</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>list-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.ListInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>list-info</servlet-name>-->
+        <!--<url-pattern>/list-info</url-pattern>-->
+    <!--</servlet-mapping>-->
 
-    <servlet>
-        <servlet-name>delete-info</servlet-name>
-        <servlet-class>examples.example1.DeleteInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>delete-info</servlet-name>
-        <url-pattern>/delete-info</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>delete-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.DeleteInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>delete-info</servlet-name>-->
+        <!--<url-pattern>/delete-info</url-pattern>-->
+    <!--</servlet-mapping>-->
 
-    <servlet>
-        <servlet-name>edit-info</servlet-name>
-        <servlet-class>examples.example1.EditInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>edit-info</servlet-name>
-        <url-pattern>/edit-info</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>edit-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.EditInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>edit-info</servlet-name>-->
+        <!--<url-pattern>/edit-info</url-pattern>-->
+    <!--</servlet-mapping>-->
 
-    <servlet>
-        <servlet-name>modify-info</servlet-name>
-        <servlet-class>examples.example1.ModifyInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>modify-info</servlet-name>
-        <url-pattern>/modify-info</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>modify-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.ModifyInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>modify-info</servlet-name>-->
+        <!--<url-pattern>/modify-info</url-pattern>-->
+    <!--</servlet-mapping>-->
 
-    <servlet>
-        <servlet-name>add-info</servlet-name>
-        <servlet-class>examples.example1.AddInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>add-info</servlet-name>
-        <url-pattern>/add-info</url-pattern>
-    </servlet-mapping>
+    <!--<servlet>-->
+        <!--<servlet-name>add-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.AddInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>add-info</servlet-name>-->
+        <!--<url-pattern>/add-info</url-pattern>-->
+    <!--</servlet-mapping>-->
 
     <servlet>
         <servlet-name>doTransfer</servlet-name>
@@ -126,5 +126,5 @@
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-</web-app>
+</example3.web-app>
 

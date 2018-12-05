@@ -14,8 +14,8 @@ function change(v){
 	var str="0";
 	for(i=0;i<v;i++){
 		str+=("_"+(document.getElementById(s[i]).selectedIndex-1));
-	};
-	var ss=document.getElementById(s[v]);
+    }
+    var ss=document.getElementById(s[v]);
 	with(ss){
 		length = 0;
 		options[0]=new Option(opt0[v],opt0[v]);

@@ -14,7 +14,7 @@
         <!--Servlet名称-->
         <servlet-name>HelloWorld</servlet-name>
         <!--对外访问的虚拟路径，以斜线开始-->
-        <url-pattern>/hello-world</url-pattern>
+        <url-pattern>/tests/hello-world</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -23,7 +23,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>GetDate</servlet-name>
-        <url-pattern>/get-date</url-pattern>
+        <url-pattern>/tests/get-date</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -36,61 +36,88 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Test1</servlet-name>
-        <url-pattern>/test1</url-pattern>
+        <url-pattern>/tests/test1</url-pattern>
+    </servlet-mapping>
+
+    <!--<servlet>-->
+        <!--<servlet-name>list-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.ListInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>list-info</servlet-name>-->
+        <!--<url-pattern>/list-info</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>delete-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.DeleteInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>delete-info</servlet-name>-->
+        <!--<url-pattern>/delete-info</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>edit-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.EditInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>edit-info</servlet-name>-->
+        <!--<url-pattern>/edit-info</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>modify-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.ModifyInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>modify-info</servlet-name>-->
+        <!--<url-pattern>/modify-info</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>add-info</servlet-name>-->
+        <!--<servlet-class>examples.example1.AddInfo</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>add-info</servlet-name>-->
+        <!--<url-pattern>/add-info</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>doTransfer</servlet-name>
+        <servlet-class>tests.part6_servlet.DoTransfer</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doTransfer</servlet-name>
+        <url-pattern>/tests/transfer</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>add</servlet-name>
-        <servlet-class>tests.part6_servlet.example1.AddInfo</servlet-class>
+        <servlet-name>batch</servlet-name>
+        <servlet-class>tests.part6_servlet.TestBatch</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>add</servlet-name>
-        <url-pattern>/add</url-pattern>
+        <servlet-name>batch</servlet-name>
+        <url-pattern>/tests/batch</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>list-info</servlet-name>
-        <servlet-class>tests.part6_servlet.example1.ListInfo</servlet-class>
+        <servlet-name>page</servlet-name>
+        <servlet-class>tests.part6_servlet.TestPage</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>list-info</servlet-name>
-        <url-pattern>/list-info</url-pattern>
+        <servlet-name>page</servlet-name>
+        <url-pattern>/tests/page</url-pattern>
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>delete-info</servlet-name>
-        <servlet-class>tests.part6_servlet.example1.DeleteInfo</servlet-class>
+        <servlet-name>ControllerServlet</servlet-name>
+        <servlet-class>examples_book.task_register.controller.ControllerServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>delete-info</servlet-name>
-        <url-pattern>/delete-info</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>edit-info</servlet-name>
-        <servlet-class>tests.part6_servlet.example1.EditInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>edit-info</servlet-name>
-        <url-pattern>/edit-info</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>modify-info</servlet-name>
-        <servlet-class>tests.part6_servlet.example1.ModifyInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>modify-info</servlet-name>
-        <url-pattern>/modify-info</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>add-info</servlet-name>
-        <servlet-class>tests.part6_servlet.example1.AddInfo</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>add-info</servlet-name>
-        <url-pattern>/add-info</url-pattern>
+        <servlet-name>ControllerServlet</servlet-name>
+        <url-pattern>/controller-servlet</url-pattern>
     </servlet-mapping>
 
     <!--首页列表-->

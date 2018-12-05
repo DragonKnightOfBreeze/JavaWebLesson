@@ -5,16 +5,16 @@
     <title>直接创建</title>
       <script type="text/javascript">
         function testObject(){ //创建对象，封装数据和行为
-	     var s=new Object();  
+	     var s={};
 	      s.name="mary";
-	      s.age=18; 
+	      s.age=18;
 	      s.sing=function(){alert("hello");};//匿名方法，赋进去一个function，所以sing是个方法
-	      alert(s.name);	
+	      alert(s.name);
 	      alert(s.age);
-	      s.sing();	
+	      s.sing();
 	      }
-	      
-      </script> 
+
+      </script>
   </head>
   <body>
     <input type="button" value="使用Object创建对象" onclick="testObject();"/>

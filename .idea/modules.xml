@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Example3/Example3.iml" filepath="$PROJECT_DIR$/Example3/Example3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaWebLesson.iml" filepath="$PROJECT_DIR$/.idea/JavaWebLesson.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Utility/Utility.iml" filepath="$PROJECT_DIR$/Utility/Utility.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyCode/MyCode.iml" filepath="$PROJECT_DIR$/MyCode/MyCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebApp1/WebApp1.iml" filepath="$PROJECT_DIR$/WebApp1/WebApp1.iml" />
     </modules>
   </component>

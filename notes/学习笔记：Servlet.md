@@ -28,7 +28,7 @@
         <servlet-class>tests.part6_servlet.HelloWorld</servlet-class>
     </servlet>
 
-    <servlet-mapping>1
+    <servlet-mapping>
         <!--Servlet名称-->
         <servlet-name>HelloWorld</servlet-name>
         <!--对外访问的虚拟路径-->

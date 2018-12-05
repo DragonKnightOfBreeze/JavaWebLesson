@@ -1,4 +1,4 @@
-<%--@elvariable id="userBean" type="examples_book.task_register.domain.UserBean"--%>
+<%--@elvariable id="userBean" type="examples_book.task_register.example3.domain.UserBean"--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
 
