@@ -14,7 +14,7 @@ import java.io.IOException;
  * 编辑信息的Servlet
  *  @noinspection Duplicates
 */
-@WebServlet(urlPatterns = {"/edit"})
+@WebServlet(urlPatterns = {"/example3/edit"})
 public class EditServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -33,7 +33,7 @@ public class EditServlet extends HttpServlet {
 
 
 		req.setAttribute("student",student);
-		req.getRequestDispatcher("jsp/editPage.jsp").forward(req,resp);
+		req.getRequestDispatcher("/example3/jsp/editPage.jsp").forward(req,resp);
 	}
 }
 

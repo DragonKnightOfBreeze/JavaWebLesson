@@ -50,9 +50,10 @@
 12. 不需要手动启动tomcat服务器，且需要确保是关闭的。停止运行则表示与服务器断开连接。
 13. 如果设置了默认浏览器，此后会直接用默认浏览器打开欢迎页。
 
+
 # Servlet
 
-设置自动加载Servlet程序
+设置自动加载Servlet程序  
 在servlet元素中加上一个load-on-startup子元素，其中的值为正数，表示优先级。
 
 设置初始化参数（在Servlet标签里面，每个init-param标签只能写一对）
@@ -65,5 +66,12 @@
 
 一般来说，load-on-startup标签要放在前面。
 
-`res.sendRedirect(url);`：重定向。  
-清空respose，然后再将状态码302和地址返回到浏览器。意味着浏览器会自动地向服务器提出第二次请求
+`response.sendRedirect(getServletContext().getContextPath() + "\sampleUrl");`：重定向。
+客户端跳转，地址改变。  
+清空response，然后再将状态码302和地址返回到浏览器。意味着浏览器会自动地向服务器提出第二次请求。
+参数：如果以`/`开头，则代表站点根目录。
+
+`request.getRequestDispatcher("/sampleUrl.jsp").forward(request, response);`：转发。
+服务器端跳转，地址不变。  
+共享request和response，可以传递参数。  
+参数：如果以`/`开头，则代表Web应用程序根目录。

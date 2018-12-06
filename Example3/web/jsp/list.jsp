@@ -37,19 +37,19 @@
                 </thead>
                 <tbody>
                 <jsp:useBean id="studentList" scope="request" type="java.util.List<example3.domain.Student>"/>
-                <c:forEach var="student" items="studentList">
-                    <td>${student.getId()}</td>
-                    <td>${student.getStuId()}</td>
-                    <td>${student.getName()}</td>
-                    <td>${student.getScore()}</td>
+                <c:forEach var="student" items="${studentList}">
+                    <td>${student.id}</td>
+                    <td>${student.stuId}</td>
+                    <td>${student.name}</td>
+                    <td>${student.score}</td>
                     <td>
-                        <c:url value="/edit" var="editUrl">
-                            <c:param name="id" value="${student.getId()}"/>
+                        <c:url value="example3/edit" var="editUrl">
+                            <c:param name="id" value="${student.id}"/>
                         </c:url>
                         <a href="${editUrl}">编辑</a>
                         &emsp;
-                        <c:url value="/delete" var="deleteUrl">
-                            <c:param name="id" value="${student.getId()}"/>
+                        <c:url value="/example3/delete" var="deleteUrl">
+                            <c:param name="id" value="${student.id()}"/>
                         </c:url>
                         <a href="${deleteUrl}">删除</a>
                     </td>
@@ -58,7 +58,7 @@
             </table>
 
             <div>
-                <a href="list?pageIndex=1">&lt;首页&gt;</a>&nbsp;
+                <a href="example3/list?pageIndex=1">&lt;首页&gt;</a>&nbsp;
 
                 <jsp:useBean id="pageIndex" scope="request" type="java.lang.Integer"/>
                 <jsp:useBean id="pageNumber" scope="request" type="java.lang.Integer"/>
@@ -70,13 +70,13 @@
                 <%
                         }else{
                 %>
-                <a  href="list?pageIndex=<%=i%>">&lt;<%=i%>页&gt;</a>&nbsp;
+                <a  href="example3/list?pageIndex=<%=i%>">&lt;<%=i%>页&gt;</a>&nbsp;
                 <%
                         }
                     }
                 %>
 
-                <a href="list?pageIndex=<%=pageNumber%>">&lt;尾页&gt;</a>
+                <a href="example3/list?pageIndex=<%=pageNumber%>">&lt;尾页&gt;</a>
             </div>
         </div>
     </div>

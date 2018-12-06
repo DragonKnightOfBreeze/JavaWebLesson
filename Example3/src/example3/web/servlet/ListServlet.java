@@ -9,12 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * 列举信息的Servlet
  */
-@WebServlet(urlPatterns = {"/list"})
+@WebServlet(urlPatterns = {"/example3/list"})
 public class ListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -26,7 +27,7 @@ public class ListServlet extends HttpServlet {
 		}
 		int pageCount = 30;
 
-		List<Student> studentList = null;
+		List<Student> studentList = new ArrayList<>();
 		int pageNumber = 1;
 		try {
 			studentList = DaoFactory.getStudentDao().findAllInPage(pageIndex, pageCount);
@@ -38,6 +39,6 @@ public class ListServlet extends HttpServlet {
 		req.setAttribute("pageIndex", pageIndex);
 		req.setAttribute("pageNumber", pageNumber);
 		req.setAttribute("studentList", studentList);
-		req.getRequestDispatcher("jsp/list.jsp").forward(req, resp);
+		req.getRequestDispatcher("/example3/jsp/list.jsp").forward(req, resp);
 	}
 }

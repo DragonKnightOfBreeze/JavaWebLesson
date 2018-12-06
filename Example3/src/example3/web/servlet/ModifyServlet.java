@@ -14,7 +14,7 @@ import example3.domain.*;
  * 编辑信息的Servlet
  * @noinspection Duplicates
 */
-@WebServlet(urlPatterns = {"/modify"})
+@WebServlet(urlPatterns = {"/example3/modify"})
 public class ModifyServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -29,7 +29,7 @@ public class ModifyServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		resp.sendRedirect("list");
+		resp.sendRedirect("/example3/list");
 	}
 }
 

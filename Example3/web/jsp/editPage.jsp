@@ -26,7 +26,7 @@
         </div>
 
         <div id="right-div">
-            <form action="modify" method="post">
+            <form action="example3/modify" method="post">
                 <table>
                     <thead>
                     <tr>

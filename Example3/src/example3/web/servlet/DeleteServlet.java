@@ -2,7 +2,6 @@ package example3.web.servlet;
 
 import example3.dao.DaoFactory;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -13,7 +12,7 @@ import java.io.IOException;
  * 删除信息的Servlet
  *  @noinspection Duplicates
  *  */
-@WebServlet(urlPatterns = {"/delete"})
+@WebServlet(urlPatterns = {"/example3/delete"})
 public class DeleteServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -25,6 +24,6 @@ public class DeleteServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 
-		resp.sendRedirect("list");
+		resp.sendRedirect("/example3/list");
 	}
 }

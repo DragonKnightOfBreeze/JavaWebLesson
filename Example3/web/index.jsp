@@ -5,6 +5,6 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <c:redirect url="/list"/>
+    <c:redirect url="/example3/list"/>
 </body>
 </html>
