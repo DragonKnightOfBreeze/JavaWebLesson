@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>字符计数器</title>
+<script>
+    var temp_array = [];
+    var count_array = [];
+
+    /**
+     * 得到输入的字符，检查有多少种字符，每个字符有多少个，然后弹窗输出
+     */
+    function check() {
+        var index = 0;
+
+        var input_value = document.getElementById("input").value;
+        var char_array = input_value.toString().split("");      //得到字符数组
+        for (var i = 0; i < char_array.length; i++) {
+            //如果没有在临时数组中找到
+            if (temp_array.indexOf(char_array[i]) === -1) {
+                temp_array[index] = char_array[i];
+                count_array[index] = 1;
+                index++;
+            }
+            //如果在找到了，在找到的位置加上一个计数
+            else {
+                count_array[temp_array.indexOf(char_array[i])]++;
+            }
+        }
+        var str = "";
+        for (i = 0; i < index; i++) {
+            var temp_str = "字符：" + temp_array[i] + "    " + "个数：" + count_array[i] + "\n";
+            str = str.concat(temp_str);
+        }
+        alert(str);
+    }
+</script>
+</head>
+
+<body>
+<input id="input" type="text">
+<input type="button" value="检查" onclick="check()">
+</body>
+</html>

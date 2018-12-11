@@ -1,6 +1,6 @@
 package tests.part6_servlet;
 
-import examples.example2.Utils.DBUtils;
+import tests.part6_servlet.utils.DBUtils;
 
 import javax.servlet.http.*;
 import java.io.*;

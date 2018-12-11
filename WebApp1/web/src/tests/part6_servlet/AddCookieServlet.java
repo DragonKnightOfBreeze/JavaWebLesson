@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "AddCookieServlet")
+@WebServlet(name = "AddCookieServlet" ,urlPatterns = "/tests/addCookie")
 public class AddCookieServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) {
 	}
@@ -17,6 +17,10 @@ public class AddCookieServlet extends HttpServlet {
 		Cookie cookie = new Cookie("name","Tom");
 		response.addCookie(cookie);
 		cookie.setMaxAge(60*3);
+		//删除cookie
+		cookie.setValue(null);
+		//设置路径为"/"
+		cookie.setPath("/");
 		response.getWriter().println(cookie);
 	}
 }

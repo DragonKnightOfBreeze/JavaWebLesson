@@ -11,7 +11,7 @@ public class GetDate extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 		//注意request应该设置为utf-8编码
-//		resp.setCharacterEncoding("utf-8");
+		req.setCharacterEncoding("utf-8");
 		resp.setContentType("text/html;charset=utf-8");
 
 		var out = resp.getWriter();

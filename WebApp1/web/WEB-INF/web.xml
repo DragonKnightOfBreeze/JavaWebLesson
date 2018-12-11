@@ -41,7 +41,7 @@
 
     <!--<servlet>-->
         <!--<servlet-name>list-info</servlet-name>-->
-        <!--<servlet-class>examples.example1.ListInfo</servlet-class>-->
+        <!--<servlet-class>ListInfo</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
         <!--<servlet-name>list-info</servlet-name>-->
@@ -50,7 +50,7 @@
 
     <!--<servlet>-->
         <!--<servlet-name>delete-info</servlet-name>-->
-        <!--<servlet-class>examples.example1.DeleteInfo</servlet-class>-->
+        <!--<servlet-class>DeleteInfo</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
         <!--<servlet-name>delete-info</servlet-name>-->
@@ -59,7 +59,7 @@
 
     <!--<servlet>-->
         <!--<servlet-name>edit-info</servlet-name>-->
-        <!--<servlet-class>examples.example1.EditInfo</servlet-class>-->
+        <!--<servlet-class>EditInfo</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
         <!--<servlet-name>edit-info</servlet-name>-->
@@ -68,7 +68,7 @@
 
     <!--<servlet>-->
         <!--<servlet-name>modify-info</servlet-name>-->
-        <!--<servlet-class>examples.example1.ModifyInfo</servlet-class>-->
+        <!--<servlet-class>ModifyInfo</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
         <!--<servlet-name>modify-info</servlet-name>-->
@@ -77,7 +77,7 @@
 
     <!--<servlet>-->
         <!--<servlet-name>add-info</servlet-name>-->
-        <!--<servlet-class>examples.example1.AddInfo</servlet-class>-->
+        <!--<servlet-class>AddInfo</servlet-class>-->
     <!--</servlet>-->
     <!--<servlet-mapping>-->
         <!--<servlet-name>add-info</servlet-name>-->
@@ -91,24 +91,6 @@
     <servlet-mapping>
         <servlet-name>doTransfer</servlet-name>
         <url-pattern>/tests/transfer</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>batch</servlet-name>
-        <servlet-class>tests.part6_servlet.TestBatch</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>batch</servlet-name>
-        <url-pattern>/tests/batch</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>page</servlet-name>
-        <servlet-class>tests.part6_servlet.TestPage</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>page</servlet-name>
-        <url-pattern>/tests/page</url-pattern>
     </servlet-mapping>
 
     <servlet>

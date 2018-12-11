@@ -66,7 +66,7 @@
 
 一般来说，load-on-startup标签要放在前面。
 
-`response.sendRedirect(getServletContext().getContextPath() + "\sampleUrl");`：重定向。
+`response.sendRedirect(getServletContext().getContextPath() + "/sampleUrl");`：重定向。
 客户端跳转，地址改变。  
 清空response，然后再将状态码302和地址返回到浏览器。意味着浏览器会自动地向服务器提出第二次请求。
 参数：如果以`/`开头，则代表站点根目录。
@@ -75,3 +75,10 @@
 服务器端跳转，地址不变。  
 共享request和response，可以传递参数。  
 参数：如果以`/`开头，则代表Web应用程序根目录。
+
+链接地址和表单提交地址：都应该从站点根目录开始填写。
+
+\<c:redirect>：同样是重定向。
+\<jsp:forward>：同样是转发。
+
+

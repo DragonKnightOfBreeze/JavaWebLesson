@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>数组处理</title>
+<script>
+    function doReverse(value) {
+        var array = value.split(",");
+        var result = array.reverse();
+        alert("倒转后的数组：" + result.join(","));
+    }
+
+    function doSort(value) {
+        var array = value.split(",");
+        var result = array.sort();
+        alert("排序（文本）后的数组：" + result.join(","));
+    }
+
+    function doSort2(value) {
+        var array = value.split(",");
+        var result = array.sort(function (a, b) {
+            return a - b;
+        });
+        alert("排序（数值）后的数组：" + result.join(","));
+    }
+</script>
+</head>
+
+<body>
+<input type="text">
+<input type="button" value="数组倒转" onclick="doReverse(this.value)">
+<input type="button" value="数组排序（文本）" onclick="doSort(this.value)">
+<input type="button" vallue="数组排序（数值）" onclick="doSort2(this.value)">
+</body>
+</html>

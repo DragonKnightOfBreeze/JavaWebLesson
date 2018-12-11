@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>下拉选取功能</title>
+<style>
+	h1 {
+		text-align: center;
+	}
+	select {
+		width: 200px;
+		height: 300px;
+		font-size: 30px;
+	}
+	input {
+		font-size: 20px;
+		width: 50px;
+	}
+	#main {
+		width: 500px;
+		height: 300px;
+		margin: 0 auto;
+	}
+	#left {
+		float: left;
+	}
+	#middle {
+		width: 80px;
+		height: 300px;
+		border-left: 1px solid #aaa;
+		border-right: 1px solid #aaa;
+		text-align: center;
+		float: left;
+	}
+	#right {
+		float: left
+	}
+</style>
+<script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        $(":button[value='>']").click(function () {
+            // var selected = $("#left select option:selected");
+            $("#right select").append($("#left option:selected"));
+        });
+        $(":button[value='>>']").click(function () {
+            // var all = $("#left select option");
+            $("#right select").append($("#left option"));
+        });
+        $(":button[value='<']").click(function () {
+            // var selected = $("#right option:selected");
+            $("#left select").append($("#right option:selected"));
+        });
+        $(":button[value='<<']").click(function () {
+            // var all = $("#right select option");
+            $("#left select").append($("#right option"));
+        });
+    });
+</script>
+</head>
+
+<body>
+<h1>多选</h1>
+<div id="main">
+	<div id="left">
+		<select multiple="multiple">
+			<option>北京市</option>
+			<option>上海市</option>
+			<option>天津市</option>
+			<option>深圳市</option>
+			<option>广州市</option>
+			<option>南京市</option>
+			<option>南昌市</option>
+		</select>
+	</div>
+
+	<div id="middle">
+		<p><input type="button" value=">"></p>
+		<p><input type="button" value=">>"></p>
+		<p><input type="button" value="&lt;"></p>
+		<p><input type="button" value="&lt;&lt;"></p>
+	</div>
+
+	<div id="right">
+		<select multiple="multiple">
+		</select>
+	</div>
+</div>
+</body>
+</html>

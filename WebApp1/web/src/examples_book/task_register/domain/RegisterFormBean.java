@@ -56,8 +56,6 @@ public class RegisterFormBean {
 
 	/**
 	 * 验证属性
-	 *
-	 * @return
 	 */
 	public boolean validate() {
 		boolean flag = true;
@@ -92,9 +90,6 @@ public class RegisterFormBean {
 
 	/**
 	 * 向Map集合errors中添加错误信息
-	 *
-	 * @param error
-	 * @param errorMsg
 	 */
 	public void setErrorMsg(@NotNull String error, @NotNull String errorMsg) {
 		errorMap.put(error, errorMsg);

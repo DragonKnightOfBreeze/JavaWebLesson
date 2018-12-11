@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>计算平方值</title>
+<script>
+    function getSquare() {
+        var input = document.getElementById("input");
+        var input_value = input.value.trim();
+        if (input_value = "") {
+            alert("没有输入！");
+            return;
+        }
+        else if (isNaN(Number(input_value))) {
+            alert("输入的不是一个数字！");
+            input.value = "";
+            return;
+        }
+        var span = document.getElementById("output");
+        span.innerHTML = input_value * input_value;
+    }
+</script>
+</head>
+
+<body>
+<input id="input" type="text" title="请输入一个数字">
+<input type="button" value="平方" onclick="getSquare()">
+=<span id="output"></span>
+</body>
+</html>
