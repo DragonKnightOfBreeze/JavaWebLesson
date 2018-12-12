@@ -14,7 +14,7 @@ import java.io.IOException;
  * 编辑信息的Servlet
  *  @noinspection Duplicates
 */
-@WebServlet(urlPatterns = {"/example3/edit"})
+@WebServlet(urlPatterns = {"/example/example3/edit"})
 public class EditServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

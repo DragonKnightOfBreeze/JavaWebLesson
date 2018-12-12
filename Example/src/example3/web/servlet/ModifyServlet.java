@@ -1,20 +1,19 @@
 package example3.web.servlet;
 
-import javax.servlet.ServletException;
+import example3.dao.DaoFactory;
+import example3.domain.Student;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-import example3.dao.*;
-import example3.domain.*;
-
 /**
  * 编辑信息的Servlet
  * @noinspection Duplicates
 */
-@WebServlet(urlPatterns = {"/example3/modify"})
+@WebServlet(urlPatterns = {"/example/example3/modify"})
 public class ModifyServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {

@@ -8,6 +8,7 @@ public class Student {
 	private String stuId;
 	private String name;
 	private int score;
+	private String password;
 
 
 	public int getId() {
@@ -57,4 +58,11 @@ public class Student {
 		return "stuId:" + stuId + "\tname:" + name + "\tscore:" + score;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

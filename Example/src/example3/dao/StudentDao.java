@@ -23,7 +23,11 @@ public class StudentDao implements IStudentDao {
 		con = DBUtils.getConnection();
 	}
 
-	@Override
+	public Student register(Student student) {
+		//TODO
+		return true;
+	}
+
 	public Student findById(int id) throws Exception {
 		String sql = "select stuId,name,score from Student where id=?";
 

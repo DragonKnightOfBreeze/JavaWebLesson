@@ -12,7 +12,7 @@ import java.io.IOException;
  * 删除信息的Servlet
  *  @noinspection Duplicates
  *  */
-@WebServlet(urlPatterns = {"/example3/delete"})
+@WebServlet(urlPatterns = {"/example/example3/delete"})
 public class DeleteServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {

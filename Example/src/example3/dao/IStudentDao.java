@@ -16,6 +16,8 @@ public interface IStudentDao {
 	 */
 	Student findById(int id) throws Exception;
 
+	Student register(Student student) throws Exception;
+
 	/**
 	 * 查询信息并分页。
 	 * @param pageIndex 页面索引，从1开始

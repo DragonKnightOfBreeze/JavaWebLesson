@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * 列举信息的Servlet
  */
-@WebServlet(urlPatterns = {"/example3/list"})
+@WebServlet(urlPatterns = {"/example/example3/list"})
 public class ListServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {

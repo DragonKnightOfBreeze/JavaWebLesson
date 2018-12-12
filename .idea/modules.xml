@@ -6,8 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/JavaWebLesson.iml" filepath="$PROJECT_DIR$/.idea/JavaWebLesson.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyCode/MyCode.iml" filepath="$PROJECT_DIR$/MyCode/MyCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/Report/Report.iml" filepath="$PROJECT_DIR$/Report/Report.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WebApp1/WebApp1.iml" filepath="$PROJECT_DIR$/WebApp1/WebApp1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StaticWeb/StaticWeb.iml" filepath="$PROJECT_DIR$/StaticWeb/StaticWeb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Web/Web.iml" filepath="$PROJECT_DIR$/Web/Web.iml" />
     </modules>
   </component>
 </project>
